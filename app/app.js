@@ -5,8 +5,10 @@ import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 
 import es6Promise from 'es6-promise';
+import es6ObjectAssign from 'es6-object-assign';
 import 'isomorphic-fetch';
 es6Promise.polyfill();
+es6ObjectAssign.polyfill();
 
 import AppContainer from './components/app-container';
 import rootReducer from './reducers/reducers';

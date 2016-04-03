@@ -1,16 +1,15 @@
-import CounterAction from '../interfaces/counter-action';
 import {receive} from './fetch';
 
 export const INCREMENT = 'INCREMENT';
 
-export function increment(counterId: string): CounterAction {
+export function increment(counterId) {
     return {
         type: INCREMENT,
         id: counterId
     };
 }
 
-export function persistIncrement(counterId: string) {
+export function persistIncrement(counterId) {
     return function(dispatch) {
         dispatch(increment(counterId));
 

@@ -1,12 +1,11 @@
 import {DECREMENT, INCREMENT, RECEIVE_COUNTERS} from '../actions/actions';
-import Counter from '../interfaces/counter';
 
 const initialState = {
     counters: []
 };
 
-function createCounterUpdate(adjustment: number, action) {
-    return function(counter: Counter): Counter {
+function createCounterUpdate(adjustment, action) {
+    return function(counter) {
         if (counter.id === action.id) {
             return {
                 id: counter.id,
