@@ -2,6 +2,6 @@ import React from 'react';
 
 export default (props) => {
     return (
-        <button>{props.symbol}</button>
+        <button onClick={e => props.click(props.data)}>{props.symbol}</button>
     );
 }

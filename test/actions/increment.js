@@ -40,6 +40,14 @@ describe('persistIncrement', function () {
                 type: 'RECEIVE_COUNTERS',
                 data: [{id: 'abcd', title: 'test', count: 1}]
             })).to.equal(true);
+            expect(fetchMock.lastOptions('/api/v1/counter/inc')).to.eql({
+                method: 'POST',
+                body: JSON.stringify({id: 'abcd'}),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'same-origin'
+            });
             done();
         });
     });
