@@ -9,7 +9,7 @@ export default (props) => {
             <CounterButton symbol="-" click={props.dec} data={props.cid}></CounterButton>
             <span>{props.count}</span>
             <CounterButton symbol="+" click={props.inc} data={props.cid}></CounterButton>
-            <CounterButton symbol="x"></CounterButton>
+            <CounterButton symbol="x" click={props.delete} data={props.cid}></CounterButton>
         </div>
     );
 }

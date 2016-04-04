@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {create, fetchCounters,
-        persistIncrement, persistDecrement} from '../actions/actions';
+import {create, fetchCounters, persistIncrement,
+        persistDecrement, deleteCounter} from '../actions/actions';
 import CounterInput from './CounterInput';
 import Counter from './Counter';
 
@@ -14,6 +14,7 @@ class AppContainer extends React.Component {
         this.createCounter = this.createCounter.bind(this);
         this.incrementCounter = this.incrementCounter.bind(this);
         this.decrementCounter = this.decrementCounter.bind(this);
+        this.deleteCounter = this.deleteCounter.bind(this);
     }
 
     createCounter(name) {
@@ -28,6 +29,10 @@ class AppContainer extends React.Component {
         this.props.dispatch(persistDecrement(id));
     }
 
+    deleteCounter(id) {
+        this.props.dispatch(deleteCounter(id));
+    }
+
     render() {
         return (
             <div>
@@ -37,7 +42,7 @@ class AppContainer extends React.Component {
                     <Counter
                         key={c.id} title={c.title} cid={c.id}
                         count={c.count} inc={this.incrementCounter}
-                        dec={this.decrementCounter}
+                        dec={this.decrementCounter} delete={this.deleteCounter}
                     />
                 )}
             </div>
