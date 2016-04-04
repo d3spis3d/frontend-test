@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   background-color: #FAFAFA;
+  font-family: Verdana,Geneva,sans-serif; 
 }
 
 .container {
@@ -61,7 +62,7 @@ input:focus {
 
 .title {
   display: inline-block;
-  width: calc(100% - 175px);
+  width: calc(100% - 210px);
   min-width: 100px;
   white-space: nowrap;
   overflow: hidden;
