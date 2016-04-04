@@ -1,3 +1,16 @@
+# My comments
+
+Running app:
+- `npm install`
+- `npm run build`
+- `npm run start`
+
+Tests can be run using:
+ - `npm run test`
+
+Application is built using React and Redux, bundled using Webpack and Babel.js. Unit tests run with Chai and Mocha. 
+
+
 # SITEPOINT FRONTEND TEST
 
 You need to create a simple counter application that can do the following:

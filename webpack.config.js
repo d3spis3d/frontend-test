@@ -4,7 +4,7 @@ module.exports = {
       filename: './static/app.js'
   },
   resolve: {
-      extensions: ['', '.webpack.js', '.js']
+      extensions: ['', '.js']
   },
   module: {
       loaders: [
