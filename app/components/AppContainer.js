@@ -5,6 +5,7 @@ import {create, fetchCounters, persistIncrement,
         persistDecrement, deleteCounter} from '../actions/actions';
 import CounterInput from './CounterInput';
 import Counter from './Counter';
+import CountersTotal from './CountersTotal';
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -45,6 +46,7 @@ class AppContainer extends React.Component {
                         dec={this.decrementCounter} delete={this.deleteCounter}
                     />
                 )}
+                <CountersTotal total={this.props.total}/>
             </div>
         );
     }
