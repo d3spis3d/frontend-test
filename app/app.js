@@ -10,7 +10,7 @@ import 'isomorphic-fetch';
 es6Promise.polyfill();
 es6ObjectAssign.polyfill();
 
-import AppContainer from './components/app-container';
+import AppContainer from './components/AppContainer';
 import rootReducer from './reducers/reducers';
 
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
