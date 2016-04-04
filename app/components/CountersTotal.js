@@ -2,8 +2,8 @@ import React from 'react';
 
 export default (props) => {
     return (
-        <div>
-            <span>Total:</span>
+        <div className="total">
+            <span className="total-label">Total:</span>
             <span>{props.total}</span>
         </div>
     );

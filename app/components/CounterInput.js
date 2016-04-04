@@ -24,7 +24,7 @@ export default class CounterInput extends React.Component {
         return (
             <form onSubmit={e => this.handleSubmit(e)}>
                 <input type="text" name="create" placeholder="Counter name" value={this.state.counterName} onChange={e => this.handleNameChange(e)}></input>
-                <button type="submit">Create</button>
+                <button className="create-counter" type="submit">Create</button>
             </form>
         );
     }

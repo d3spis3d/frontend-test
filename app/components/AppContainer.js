@@ -36,7 +36,7 @@ class AppContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h1>Counter App</h1>
                 <CounterInput createCounter={this.createCounter}/>
                 {this.props.counters.map(c =>
