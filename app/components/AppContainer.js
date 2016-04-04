@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import {create, fetchCounters} from '../actions/actions';
 import CounterInput from './CounterInput';
+import Counter from './Counter';
 
 class AppContainer extends React.Component {
     constructor(props) {
@@ -20,6 +21,9 @@ class AppContainer extends React.Component {
             <div>
                 <h1>Counter App</h1>
                 <CounterInput createCounter={this.createCounter}/>
+                {this.props.counters.map(c =>
+                    <Counter key={c.id} title={c.title} count={c.count}/>
+                )}
             </div>
         );
     }
@@ -27,8 +31,8 @@ class AppContainer extends React.Component {
 
 function select(state) {
     return {
-        counters: state.counters,
-        total: state.total
+        counters: state.counters.counters,
+        total: state.total.total
     };
 }
 
