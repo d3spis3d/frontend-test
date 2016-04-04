@@ -21,7 +21,14 @@ export function persistIncrement(counterId) {
             },
             credentials: 'same-origin'
         })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error incrementing counter');
+            }
+            return response;
+        })
         .then(response => response.json())
-        .then(counters => dispatch(receive(counters)));
+        .then(counters => dispatch(receive(counters)))
+        .catch(error => console.log(error));
     };
 }
