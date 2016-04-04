@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: './app/app.js',
   output: {
@@ -10,5 +12,9 @@ module.exports = {
       loaders: [
           { test: /\.js$/, loader: 'babel-loader' }
       ]
-  }
+  },
+  plugins: [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({ minimize: true, output: { comments: false }})
+  ]
 }
