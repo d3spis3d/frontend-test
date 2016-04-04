@@ -19,7 +19,7 @@ describe('Counter', function() {
         expect(render.type).to.equal('div');
 
         const firstChild = render.props.children[0];
-        expect(firstChild.type).to.equal('span');
+        expect(firstChild.type).to.equal('div');
         expect(firstChild.props.children).to.equal('Test');
 
         const secondChild = render.props.children[1];
@@ -28,7 +28,7 @@ describe('Counter', function() {
         expect(secondChild.props.data).to.equal('abcd');
 
         const thirdChild = render.props.children[2];
-        expect(thirdChild.type).to.equal('span');
+        expect(thirdChild.type).to.equal('div');
         expect(thirdChild.props.children).to.equal('2');
 
         const fourthChild = render.props.children[3];

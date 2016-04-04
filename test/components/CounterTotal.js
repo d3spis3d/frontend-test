@@ -1,5 +1,4 @@
 import {expect} from 'chai';
-import sinon from 'sinon';
 
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
