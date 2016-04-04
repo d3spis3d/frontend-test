@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {create} from '../actions/create';
+import {create, fetchCounters} from '../actions/actions';
 import CounterInput from './CounterInput';
 
 class AppContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.props.dispatch(fetchCounters());
         this.createCounter = this.createCounter.bind(this);
     }
 
