@@ -9,7 +9,7 @@ function createCounterUpdate(adjustment, action) {
         if (counter.id === action.id) {
             return {
                 id: counter.id,
-                count: counter.count + 1,
+                count: counter.count + adjustment,
                 title: counter.title
             }
         }
@@ -20,14 +20,14 @@ function createCounterUpdate(adjustment, action) {
 export default function(state = initialState, action) {
     switch(action.type) {
         case INCREMENT:
-            const updatedCounters = state.counters.map(createCounterUpdate(1, action));
+            const countersWithIncrement = state.counters.map(createCounterUpdate(1, action));
             return Object.assign({}, state, {
-                counters: updatedCounters
+                counters: countersWithIncrement
             });
         case DECREMENT:
-            const updatedCounters = state.counter.map(createCounterUpdate(-1, action));
+            const countersWithDecrement = state.counters.map(createCounterUpdate(-1, action));
             return Object.assign({}, state, {
-                counters: updatedCounters
+                counters: countersWithDecrement
             });
         case RECEIVE_COUNTERS:
             return Object.assign({}, state, {
