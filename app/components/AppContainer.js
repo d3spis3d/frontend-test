@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {create} from '../actions/create';
+import CounterInput from './CounterInput';
 
 class AppContainer extends React.Component {
     constructor(props) {

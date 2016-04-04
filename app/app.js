@@ -16,7 +16,7 @@ import rootReducer from './reducers/reducers';
 const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 const store = createStoreWithMiddleware(rootReducer);
 
-ReactDom.render(
+ReactDOM.render(
     <Provider store={store}>
         <AppContainer/>
     </Provider>,
